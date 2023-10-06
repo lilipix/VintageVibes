@@ -18,9 +18,13 @@ const Controls = ({
   setCurrentTrack,
 }) => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const skipForward = () => {};
+  const skipForward = () => {
+    audioRef.current.currentTime += 15;
+  };
 
-  const skipBackward = () => {};
+  const skipBackward = () => {
+    audioRef.current.currentTime -= 15;
+  };
 
   // const togglePlayPause = () => {
   //   setIsPlaying((prev) => {
@@ -45,7 +49,16 @@ const Controls = ({
     });
   };
 
-  const handlePrevious = () => {};
+  const handlePrevious = () => {
+    if (trackIndex === 0) {
+      let lastTrackIndex = tracks.length - 1;
+      setTrackIndex(lastTrackIndex);
+      setCurrentTrack(tracks[lastTrackIndex]);
+    } else {
+      setTrackIndex((trackIndex) => trackIndex - 1);
+      setCurrentTrack(tracks[trackIndex - 1]);
+    }
+  };
 
   const handleNext = () => {
     if (trackIndex >= tracks.length - 1) {
