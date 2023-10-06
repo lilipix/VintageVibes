@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   IoPlayBackSharp,
   IoPlayForwardSharp,
@@ -25,18 +25,6 @@ const Controls = ({
   const skipBackward = () => {
     audioRef.current.currentTime -= 15;
   };
-
-  // const togglePlayPause = () => {
-  //   setIsPlaying((prev) => {
-  //     const newState = !prev;
-  //     if (newState) {
-  //       audioRef.current.play();
-  //     } else {
-  //       audioRef.current.pause();
-  //     }
-  //     return newState;
-  //   });
-  // };
 
   const togglePlayPause = () => {
     setIsPlaying((isPlaying) => {

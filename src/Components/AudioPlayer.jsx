@@ -6,6 +6,7 @@ import DisplayTrack from "./DisplayTrack";
 import Controls from "./Controls";
 import "./AudioPlayer.css";
 import ProgressBar from "./ProgressBar";
+import VolumeControls from "./VolumeControls";
 
 const AudioPlayer = () => {
   const [trackIndex, setTrackIndex] = useState(0);
@@ -50,6 +51,9 @@ const AudioPlayer = () => {
             </div>
             <div className="flex">
               <ProgressBar />
+            </div>
+            <div>
+              <VolumeControls audioRef={audioRef} />
             </div>
           </div>
         </div>
