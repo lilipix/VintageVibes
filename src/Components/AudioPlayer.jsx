@@ -24,37 +24,39 @@ const AudioPlayer = () => {
           setCurrentTrack={setCurrentTrack}
           className="lg:hidden"
         />
-        <div className=" bg-green rounded-3xl lg:w-[900px] lg:h-[600px] relative">
-          <div className="flex justify-end items-end  ">
-            <img
-              src={logo}
-              alt="logo"
-              className=" w-1/5 h-1/5 lg:w-1/5 absolute top-0 right-0 rounded-3xl"
-            />
-          </div>
-          <div className=" w-full h-full flex items-center justify-center flex-col">
-            <div className="rounded-full border-red border-8 shadow-strong-inner">
+        <div className="flex items-center ">
+          <div className=" bg-green rounded-3xl lg:w-[900px] lg:h-[600px] relative">
+            <div className="flex justify-end items-end  ">
               <img
-                src={test4}
-                alt="tape"
-                className="lg:w-[600px] rounded-full   "
+                src={logo}
+                alt="logo"
+                className=" w-1/5 h-1/5 lg:w-1/5 absolute top-0 right-0 rounded-3xl"
               />
+            </div>
+            <div className=" w-full h-full flex items-center justify-center flex-col">
+              <div className="rounded-full border-red border-8 shadow-strong-inner">
+                <img
+                  src={test4}
+                  alt="tape"
+                  className="lg:w-[600px] rounded-full   "
+                />
+              </div>
+            </div>
+            <div className="flex flex-col">
+              <div className="border-red border-2 absolute">
+                <DisplayTrack
+                  currentTrack={currentTrack}
+                  audioRef={audioRef}
+                  className="flex"
+                />
+              </div>
+              <div className="flex">
+                <ProgressBar />
+              </div>
             </div>
           </div>
-          <div className="flex flex-col">
-            <div className="border-red border-2 absolute">
-              <DisplayTrack
-                currentTrack={currentTrack}
-                audioRef={audioRef}
-                className="flex"
-              />
-            </div>
-            <div className="flex">
-              <ProgressBar />
-            </div>
-            <div>
-              <VolumeControls audioRef={audioRef} />
-            </div>
+          <div>
+            <VolumeControls audioRef={audioRef} handleNext={handleNext} />
           </div>
         </div>
       </div>

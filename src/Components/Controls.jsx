@@ -65,19 +65,19 @@ const Controls = ({
           onClick={handlePrevious}
           className="mr-7 p-2 lg:py-4 lg:px-8 lg:mr-1 bg-brown rounded-t-lg "
         >
-          <IoPlaySkipBackSharp className="text-blue" />
+          <IoPlaySkipBackSharp className="text-blue text-2xl" />
         </button>
         <button
           onClick={skipBackward}
           className="mr-7 p-2 lg:py-2 lg:px-8 lg:mr-1 bg-brown rounded-t-lg "
         >
-          <IoPlayBackSharp className="text-blue" />
+          <IoPlayBackSharp className="text-blue text-2xl" />
         </button>
         <button
           onClick={togglePlayPause}
           className="mr-7 p-2 lg:py-2 lg:px-8 lg:mr-1 bg-brown rounded-t-lg "
         >
-          <HiMiniPlayPause className="text-blue" />
+          <HiMiniPlayPause className="text-blue text-2xl" />
         </button>
         {/* <button onClick={togglePlayPause}>
           {isPlaying ? <IoPauseSharp /> : <IoPlaySharp />}
@@ -87,13 +87,13 @@ const Controls = ({
           onClick={skipForward}
           className="mr-7 p-2 lg:py-2 lg:px-8 lg:mr-1 bg-brown rounded-t-lg "
         >
-          <IoPlayForwardSharp className="text-blue" />
+          <IoPlayForwardSharp className="text-blue text-2xl" />
         </button>
         <button
           onClick={handleNext}
           className="mr-7 p-2 lg:py-2 lg:px-8 lg:mr-1 bg-brown rounded-t-lg "
         >
-          <IoPlaySkipForwardSharp className="text-blue" />
+          <IoPlaySkipForwardSharp className="text-blue text-2xl" />
         </button>
       </div>
     </div>
