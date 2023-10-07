@@ -4,8 +4,6 @@ import {
   IoPlayForwardSharp,
   IoPlaySkipBackSharp,
   IoPlaySkipForwardSharp,
-  // IoPlaySharp,
-  // IoPauseSharp,
 } from "react-icons/io5";
 
 import { HiMiniPlayPause } from "react-icons/hi2";
@@ -16,6 +14,8 @@ const Controls = ({
   trackIndex,
   setTrackIndex,
   setCurrentTrack,
+  handleNext,
+  currentTrack,
 }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const skipForward = () => {
@@ -27,17 +27,16 @@ const Controls = ({
   };
 
   const togglePlayPause = () => {
-    setIsPlaying((isPlaying) => {
-      if (!isPlaying) {
-        audioRef.current.play();
-      } else {
-        audioRef.current.pause();
-      }
-      return !isPlaying;
-    });
+    setIsPlaying((isPlaying) => !isPlaying);
   };
 
   const handlePrevious = () => {
+    console.log(
+      "Playing track:",
+      currentTrack.title,
+      "with source:",
+      currentTrack.src
+    );
     if (trackIndex === 0) {
       let lastTrackIndex = tracks.length - 1;
       setTrackIndex(lastTrackIndex);
@@ -48,15 +47,35 @@ const Controls = ({
     }
   };
 
-  const handleNext = () => {
-    if (trackIndex >= tracks.length - 1) {
-      setTrackIndex(0);
-      setCurrentTrack(tracks[0]);
-    } else {
-      setTrackIndex(trackIndex + 1);
-      setCurrentTrack(tracks[trackIndex + 1]);
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.src = currentTrack.src;
+      if (isPlaying) {
+        audioRef.current.play();
+      }
     }
-  };
+  }, [currentTrack, isPlaying, audioRef]);
+
+  // const handlePrevious = () => {
+  //   let lastTrackIndex;
+  //   if (trackIndex === 0) {
+  //     lastTrackIndex = tracks.length - 1;
+  //   } else {
+  //     lastTrackIndex = trackIndex - 1;
+  //   }
+
+  //   setTrackIndex(lastTrackIndex);
+  //   setCurrentTrack(tracks[lastTrackIndex]);
+  // };
+
+  // useEffect(() => {
+  //   console.log("Effect triggered. isPlaying:", isPlaying);
+  //   if (isPlaying) {
+  //     audioRef.current.play();
+  //   } else {
+  //     audioRef.current.pause();
+  //   }
+  // }, [isPlaying, audioRef]);
 
   return (
     <div className="flex ml-6 lg:ml-8 ">
@@ -73,12 +92,16 @@ const Controls = ({
         >
           <IoPlayBackSharp className="text-blue text-2xl" />
         </button>
-        <button
-          onClick={togglePlayPause}
-          className="mr-7 p-2 lg:py-2 lg:px-8 lg:mr-1 bg-brown rounded-t-lg "
-        >
-          <HiMiniPlayPause className="text-blue text-2xl" />
-        </button>
+
+        {
+          <button
+            onClick={togglePlayPause}
+            className="mr-7 p-2 lg:py-2 lg:px-8 lg:mr-1 bg-brown rounded-t-lg "
+          >
+            <HiMiniPlayPause className="text-blue text-2xl" />
+          </button>
+        }
+
         {/* <button onClick={togglePlayPause}>
           {isPlaying ? <IoPauseSharp /> : <IoPlaySharp />}
         </button>

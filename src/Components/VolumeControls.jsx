@@ -20,7 +20,7 @@ const VolumeControls = ({ audioRef }) => {
 
   return (
     <div>
-      <div className=" flex flex-col py-14 px-4 gap-6 bg-brown rounded-tr-3xl rounded-br-3xl text-red font-bold">
+      <div className=" flex flex-col py-8 px-3 gap-6 bg-brown rounded-tr-3xl rounded-br-3xl text-red font-bold">
         <button
           type="button"
           value={volume}
