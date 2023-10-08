@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import { useEffect, useState } from "react";
 import {
   IoPlayBackSharp,
@@ -18,33 +20,29 @@ const Controls = ({
   currentTrack,
 }) => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const skipForward = () => {
-    audioRef.current.currentTime += 15;
-  };
-
-  const skipBackward = () => {
-    audioRef.current.currentTime -= 15;
-  };
 
   const togglePlayPause = () => {
     setIsPlaying((isPlaying) => !isPlaying);
   };
 
   const handlePrevious = () => {
-    console.log(
-      "Playing track:",
-      currentTrack.title,
-      "with source:",
-      currentTrack.src
-    );
+    let lastTrackIndex;
     if (trackIndex === 0) {
-      let lastTrackIndex = tracks.length - 1;
-      setTrackIndex(lastTrackIndex);
-      setCurrentTrack(tracks[lastTrackIndex]);
+      lastTrackIndex = tracks.length - 1;
     } else {
-      setTrackIndex((trackIndex) => trackIndex - 1);
-      setCurrentTrack(tracks[trackIndex - 1]);
+      lastTrackIndex = trackIndex - 1;
     }
+
+    setTrackIndex(lastTrackIndex);
+    setCurrentTrack(tracks[lastTrackIndex]);
+  };
+
+  const skipForward = () => {
+    audioRef.current.currentTime += 15;
+  };
+
+  const skipBackward = () => {
+    audioRef.current.currentTime -= 15;
   };
 
   useEffect(() => {
@@ -55,27 +53,6 @@ const Controls = ({
       }
     }
   }, [currentTrack, isPlaying, audioRef]);
-
-  // const handlePrevious = () => {
-  //   let lastTrackIndex;
-  //   if (trackIndex === 0) {
-  //     lastTrackIndex = tracks.length - 1;
-  //   } else {
-  //     lastTrackIndex = trackIndex - 1;
-  //   }
-
-  //   setTrackIndex(lastTrackIndex);
-  //   setCurrentTrack(tracks[lastTrackIndex]);
-  // };
-
-  // useEffect(() => {
-  //   console.log("Effect triggered. isPlaying:", isPlaying);
-  //   if (isPlaying) {
-  //     audioRef.current.play();
-  //   } else {
-  //     audioRef.current.pause();
-  //   }
-  // }, [isPlaying, audioRef]);
 
   return (
     <div className="flex ml-6 lg:ml-8 ">
@@ -121,6 +98,18 @@ const Controls = ({
       </div>
     </div>
   );
+};
+
+Controls.propTypes = {
+  audioRef: PropTypes.shape({
+    current: PropTypes.instanceOf(HTMLAudioElement),
+  }),
+  tracks: PropTypes.arrayOf(PropTypes.object).isRequired,
+  trackIndex: PropTypes.number.isRequired,
+  setTrackIndex: PropTypes.func.isRequired,
+  setCurrentTrack: PropTypes.func.isRequired,
+  handleNext: PropTypes.func.isRequired,
+  currentTrack: PropTypes.object.isRequired,
 };
 
 export default Controls;

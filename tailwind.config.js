@@ -12,6 +12,9 @@ export default {
       boxShadow: {
         "strong-inner": "inset 0 4px 6px #B7410E",
       },
+      fontFamily: {
+        press: ["Press Start 2P", "cursive"],
+      },
     },
   },
   plugins: [],

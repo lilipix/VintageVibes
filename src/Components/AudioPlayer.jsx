@@ -4,28 +4,12 @@ import logo from "../assets/logo.png";
 import { tracks } from "../data/tracks.js";
 import DisplayTrack from "./DisplayTrack";
 import Controls from "./Controls";
-// import ProgressBar from "./ProgressBar";
 import VolumeControls from "./VolumeControls";
 
 const AudioPlayer = () => {
   const [trackIndex, setTrackIndex] = useState(0);
   const [currentTrack, setCurrentTrack] = useState(tracks[trackIndex]);
-  // const handleNext = () => {
-  //   console.log(
-  //     "Playing track:",
-  //     currentTrack.title,
-  //     "with source:",
-  //     currentTrack.src
-  //   );
 
-  //   if (trackIndex >= tracks.length - 1) {
-  //     setTrackIndex(0);
-  //     setCurrentTrack(tracks[0]);
-  //   } else {
-  //     setTrackIndex((trackIndex) => trackIndex + 1);
-  //     setCurrentTrack(tracks[trackIndex + 1]);
-  //   }
-  // };
   const handleNext = () => {
     let nextTrackIndex;
     if (trackIndex >= tracks.length - 1) {
@@ -37,8 +21,11 @@ const AudioPlayer = () => {
     setTrackIndex(nextTrackIndex);
     setCurrentTrack(tracks[nextTrackIndex]);
   };
-  console.log(currentTrack);
+
   const audioRef = useRef();
+  console.log("méthodes :", audioRef);
+  // console.log("méthodes :", audioRef.current);
+
   return (
     <main className="flex min-h-screen items-center justify-center">
       <div className="flex flex-col">
@@ -52,10 +39,14 @@ const AudioPlayer = () => {
           currentTrack={currentTrack}
           className="lg:hidden"
         />
-        <div className="flex items-center ">
-          <div className=" bg-green rounded-3xl lg:w-[900px] lg:h-[600px] relative">
-            <div className="border-red border-2 absolute left-40">
-              <DisplayTrack currentTrack={currentTrack} audioRef={audioRef} />
+        <div className="flex items-center justify-center ">
+          <div className=" bg-green rounded-3xl lg:w-[900px] lg:h-[600px] relative shadow-lg shadow-gray-400 ">
+            <div className=" border-double border-black  border-4 w-[300px] rounded">
+              <DisplayTrack
+                currentTrack={currentTrack}
+                audioRef={audioRef}
+                handleNext={handleNext}
+              />
             </div>
 
             <div className="flex justify-end items-end  ">
