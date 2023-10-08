@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 
 const VolumeControls = ({ audioRef }) => {
@@ -5,7 +6,6 @@ const VolumeControls = ({ audioRef }) => {
 
   useEffect(() => {
     if (audioRef && audioRef.current) {
-      console.log("Changing volume to:", volume / 100);
       audioRef.current.volume = volume / 100;
     }
   }, [volume, audioRef]);
@@ -40,6 +40,12 @@ const VolumeControls = ({ audioRef }) => {
       </div>
     </div>
   );
+};
+
+VolumeControls.propTypes = {
+  audioRef: PropTypes.shape({
+    current: PropTypes.instanceOf(HTMLAudioElement),
+  }),
 };
 
 export default VolumeControls;

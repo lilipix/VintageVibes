@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const DisplayTrack = ({ currentTrack, audioRef, handleNext }) => {
   return (
     <div>
@@ -9,6 +11,14 @@ const DisplayTrack = ({ currentTrack, audioRef, handleNext }) => {
       </div>
     </div>
   );
+};
+
+DisplayTrack.propTypes = {
+  audioRef: PropTypes.shape({
+    current: PropTypes.instanceOf(HTMLAudioElement),
+  }),
+  handleNext: PropTypes.func.isRequired,
+  currentTrack: PropTypes.object.isRequired,
 };
 
 export default DisplayTrack;

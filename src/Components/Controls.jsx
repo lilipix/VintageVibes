@@ -79,16 +79,13 @@ const Controls = ({
           </button>
         }
 
-        {/* <button onClick={togglePlayPause}>
-          {isPlaying ? <IoPauseSharp /> : <IoPlaySharp />}
-        </button>
-        */}
         <button
           onClick={skipForward}
           className="mr-7 p-2 lg:py-2 lg:px-8 lg:mr-1 bg-brown rounded-t-lg "
         >
           <IoPlayForwardSharp className="text-blue text-2xl" />
         </button>
+
         <button
           onClick={handleNext}
           className="mr-7 p-2 lg:py-2 lg:px-8 lg:mr-1 bg-brown rounded-t-lg "
