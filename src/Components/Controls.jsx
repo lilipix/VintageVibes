@@ -59,7 +59,7 @@ const Controls = ({
       <div className="flex">
         <button
           onClick={handlePrevious}
-          className="mr-7 p-2 lg:py-4 lg:px-8 lg:mr-1 bg-brown rounded-t-lg "
+          className="mr-7 p-2 lg:py-4 lg:px-8 lg:mr-1 bg-brown rounded-t-lg  "
         >
           <IoPlaySkipBackSharp className="text-blue text-2xl" />
         </button>
