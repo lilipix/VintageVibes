@@ -3,8 +3,10 @@ import AudioPlayer from "./Components/AudioPlayer";
 
 function App() {
   return (
-    <div className="bg-amber-50 min-h-screen">
-      <AudioPlayer />
+    <div className="bg-picture bg-cover bg-repeat h-screen w-screen ">
+      <div className="rotate-container ">
+        <AudioPlayer />
+      </div>
     </div>
   );
 }

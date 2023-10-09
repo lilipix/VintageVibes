@@ -13,3 +13,16 @@
     animation: scroll 10s linear infinite;
     white-space: nowrap; 
 }
+
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .rotate-container {
+    transform: rotate(-90deg);
+    transform-origin: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+  }
+}

@@ -3,14 +3,19 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      backgroundImage: {
+        picture: "url('./src/assets/5123236.jpg')",
+      },
       colors: {
+        beige: "#ff722a",
+        darkBrown: "#621704",
         green: "#6B8E23",
         brown: "#8B4513",
         red: "#B7410E",
         blue: "#B0C4DE",
       },
       boxShadow: {
-        "strong-inner": "inset 0 4px 6px #B7410E",
+        custom: " 0px 0px 105px 45px rgba(183,65,14,0.9);",
       },
       fontFamily: {
         press: [' "Press Start 2P" ', "cursive"],

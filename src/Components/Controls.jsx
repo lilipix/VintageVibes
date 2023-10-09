@@ -59,38 +59,38 @@ const Controls = ({
       <div className="flex">
         <button
           onClick={handlePrevious}
-          className="mr-7 p-2 lg:py-4 lg:px-8 lg:mr-1 bg-brown rounded-t-lg  "
+          className="mr-2 p-2 px-5 xl:py-4 xl:px-8 xl:mr-1 bg-brown rounded-t-lg border-t-darkBrown border-r-darkBrown border-l-darkBrown border-4 border-b-0 "
         >
-          <IoPlaySkipBackSharp className="text-blue text-2xl" />
+          <IoPlaySkipBackSharp className="text-blue lg:text-2xl" />
         </button>
         <button
           onClick={skipBackward}
-          className="mr-7 p-2 lg:py-2 lg:px-8 lg:mr-1 bg-brown rounded-t-lg "
+          className="mr-2 p-2 px-5 xl:py-2 xl:px-8 xl:mr-1 bg-brown rounded-t-lg  border-t-darkBrown border-r-darkBrown border-l-darkBrown border-4 border-b-0"
         >
-          <IoPlayBackSharp className="text-blue text-2xl" />
+          <IoPlayBackSharp className="text-blue lg:text-2xl" />
         </button>
 
         {
           <button
             onClick={togglePlayPause}
-            className="mr-7 p-2 lg:py-2 lg:px-8 lg:mr-1 bg-brown rounded-t-lg "
+            className="mr-2 p-2 px-5 xl:py-2 xl:px-8 xl:mr-1 bg-brown rounded-t-lg  border-t-darkBrown border-r-darkBrown border-l-darkBrown border-4 border-b-0 "
           >
-            <HiMiniPlayPause className="text-blue text-2xl" />
+            <HiMiniPlayPause className="text-blue lg:text-2xl" />
           </button>
         }
 
         <button
           onClick={skipForward}
-          className="mr-7 p-2 lg:py-2 lg:px-8 lg:mr-1 bg-brown rounded-t-lg "
+          className="mr-2 p-2 px-5 xl:py-2 xl:px-8 xl:mr-1 bg-brown rounded-t-lg  border-t-darkBrown border-r-darkBrown border-l-darkBrown border-4 border-b-0 "
         >
-          <IoPlayForwardSharp className="text-blue text-2xl" />
+          <IoPlayForwardSharp className="text-blue lg:text-2xl" />
         </button>
 
         <button
           onClick={handleNext}
-          className="mr-7 p-2 lg:py-2 lg:px-8 lg:mr-1 bg-brown rounded-t-lg "
+          className="mr-2 p-2 px-5 xl:py-2 xl:px-8 xl:mr-1 bg-brown rounded-t-lg border-t-darkBrown border-r-darkBrown border-l-darkBrown border-4 border-b-0"
         >
-          <IoPlaySkipForwardSharp className="text-blue text-2xl" />
+          <IoPlaySkipForwardSharp className="text-blue lg:text-2xl" />
         </button>
       </div>
     </div>
