@@ -26,7 +26,7 @@ const AudioPlayer = () => {
   const audioRef = useRef();
 
   return (
-    <div className="flex flex-col h-screen relative">
+    <div className="flex flex-col h-screen  relative">
       <main className="flex-grow flex items-center justify-center max-h-full">
         <div className="transform rotate-90 lg:rotate-0 flex flex-col bg-beige p-4 pl-4 pb-4 lg:p-8 lg:pl-20 lg:pb-20 border-darkBrown border-4 rounded-3xl">
           <Controls
@@ -71,10 +71,10 @@ const AudioPlayer = () => {
           </div>
         </div>
       </main>
-      <div className="flex justify-center mb-2 ">
-        <Footer />
+      <div className="flex justify-center mb-2  ">
+        <Footer className="container" />
       </div>
-      <div className="absolute top-0 right-0">
+      <div className=" text-xs absolute top-0 right-0 icon">
         <a href="http://www.freepik.com">
           Background image designed by Freepik
         </a>
