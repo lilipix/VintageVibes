@@ -5,7 +5,7 @@ import { LuMail } from "react-icons/lu";
 const Footer = () => {
   return (
     <div className="flex flex-col ">
-      <p className="text-beige  ">Réalisé par Aurélie Demure</p>
+      <p className="text-beige mb-2 ">Réalisé par Aurélie Demure</p>
       <div className="flex justify-center gap-8 ">
         <a
           className="text-beige text-lg cursor-pointer"
