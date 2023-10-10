@@ -28,7 +28,7 @@ const AudioPlayer = () => {
   return (
     <div className="flex flex-col h-screen  relative">
       <main className="flex-grow flex items-center justify-center max-h-full">
-        <div className="transform rotate-90 lg:rotate-0 flex flex-col bg-beige p-4 pl-4 pb-4 lg:p-8 lg:pl-20 lg:pb-20 border-darkBrown border-4 rounded-3xl">
+        <div className=" flex flex-col bg-beige md:p-4 md:pl-4 md:pb-4 lg:p-8 lg:pl-20 lg:pb-20 border-darkBrown border-4 rounded-3xl pt-6 pb-8 pl-2 pr-2">
           <Controls
             audioRef={audioRef}
             tracks={tracks}
@@ -40,8 +40,8 @@ const AudioPlayer = () => {
             className="lg:hidden"
           />
           <div className="flex items-center justify-center ">
-            <div className=" bg-green rounded-3xl h-[280px] w-[420px] lg:h-[467px] lg:w-[600px] xl:w-[900px] xl:h-[600px] relative flex flex-col border-darkBrown border-4">
-              <div className=" border-double border-black  border-4 w-[360px] xl:w-[500px] rounded-3xl flex self-center bg-gray-500 mt-5 mb-5 lg:mt-10 overflow-hidden relative h-24 items-center p-4">
+            <div className=" bg-green rounded-3xl w-[300px] h-[200px] md:h-[280px] md:w-[420px] lg:h-[467px] lg:w-[600px] xl:w-[900px] xl:h-[600px] relative flex flex-col border-darkBrown border-4  ">
+              <div className=" border-double border-black  border-4 md:w-[360px] xl:w-[500px] rounded-3xl flex self-center bg-gray-500 mt-5 mb-5 lg:mt-10 overflow-hidden relative h-24 items-center p-4 w-[280px]">
                 <DisplayTrack
                   currentTrack={currentTrack}
                   audioRef={audioRef}
@@ -53,7 +53,7 @@ const AudioPlayer = () => {
                   <img
                     src={test4}
                     alt="tape"
-                    className="w-[300px] lg:w-[400px] xl:w-[600px] rounded-full "
+                    className=" w-[150px] md:w-[300px] lg:w-[400px] xl:w-[600px]  rounded-full "
                   />
                 </div>
               </div>
@@ -61,7 +61,7 @@ const AudioPlayer = () => {
                 <img
                   src={logo1}
                   alt="logo"
-                  className="absolute bottom-5 left-4 xl:left-6 w-16 xl:w-36"
+                  className="absolute md:bottom-5 left-4 xl:left-6 md:w-16 xl:w-36 w-8 bottom-2"
                 />
               </div>
             </div>
@@ -74,11 +74,6 @@ const AudioPlayer = () => {
       <div className="flex justify-center mb-4 ">
         <Footer className="container" />
       </div>
-      {/* <div className=" text-xs absolute top-0 right-0 icon">
-        <a href="http://www.freepik.com">
-          Background image designed by Freepik
-        </a>
-      </div> */}
     </div>
   );
 };

@@ -14,9 +14,6 @@ export default {
         red: "#B7410E",
         blue: "#B0C4DE",
       },
-      boxShadow: {
-        custom: " 0px 0px 105px 45px rgba(183,65,14,0.9);",
-      },
       fontFamily: {
         press: [' "Press Start 2P" ', "cursive"],
       },

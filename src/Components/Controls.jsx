@@ -59,13 +59,13 @@ const Controls = ({
       <div className="flex">
         <button
           onClick={handlePrevious}
-          className="mr-2 p-2 px-5 xl:py-4 xl:px-8 xl:mr-1 bg-brown rounded-t-lg border-t-darkBrown border-r-darkBrown border-l-darkBrown border-4 border-b-0 "
+          className="mr-2 p-2 md:px-5 xl:py-4 xl:px-8 xl:mr-1 bg-brown rounded-t-lg border-t-darkBrown border-r-darkBrown border-l-darkBrown border-4 border-b-0 px-2 ml-3 "
         >
           <IoPlaySkipBackSharp className="text-blue lg:text-2xl" />
         </button>
         <button
           onClick={skipBackward}
-          className="mr-2 p-2 px-5 xl:py-2 xl:px-8 xl:mr-1 bg-brown rounded-t-lg  border-t-darkBrown border-r-darkBrown border-l-darkBrown border-4 border-b-0"
+          className="mr-2 md:p-2 md:px-5 xl:py-2 xl:px-8 xl:mr-1 bg-brown rounded-t-lg  border-t-darkBrown border-r-darkBrown border-l-darkBrown border-4 border-b-0 px-2 "
         >
           <IoPlayBackSharp className="text-blue lg:text-2xl" />
         </button>
@@ -73,7 +73,7 @@ const Controls = ({
         {
           <button
             onClick={togglePlayPause}
-            className="mr-2 p-2 px-5 xl:py-2 xl:px-8 xl:mr-1 bg-brown rounded-t-lg  border-t-darkBrown border-r-darkBrown border-l-darkBrown border-4 border-b-0 "
+            className="mr-2 p-2 md:px-5 xl:py-2 xl:px-8 xl:mr-1 bg-brown rounded-t-lg  border-t-darkBrown border-r-darkBrown border-l-darkBrown border-4 border-b-0 px-2 "
           >
             <HiMiniPlayPause className="text-blue lg:text-2xl" />
           </button>
@@ -81,14 +81,14 @@ const Controls = ({
 
         <button
           onClick={skipForward}
-          className="mr-2 p-2 px-5 xl:py-2 xl:px-8 xl:mr-1 bg-brown rounded-t-lg  border-t-darkBrown border-r-darkBrown border-l-darkBrown border-4 border-b-0 "
+          className="mr-2 p-2 md:px-5 xl:py-2 xl:px-8 xl:mr-1 bg-brown rounded-t-lg  border-t-darkBrown border-r-darkBrown border-l-darkBrown border-4 border-b-0 px-2 "
         >
           <IoPlayForwardSharp className="text-blue lg:text-2xl" />
         </button>
 
         <button
           onClick={handleNext}
-          className="mr-2 p-2 px-5 xl:py-2 xl:px-8 xl:mr-1 bg-brown rounded-t-lg border-t-darkBrown border-r-darkBrown border-l-darkBrown border-4 border-b-0"
+          className="mr-2 p-2 md:px-5 xl:py-2 xl:px-8 xl:mr-1 bg-brown rounded-t-lg border-t-darkBrown border-r-darkBrown border-l-darkBrown border-4 border-b-0 px-2 "
         >
           <IoPlaySkipForwardSharp className="text-blue lg:text-2xl" />
         </button>
