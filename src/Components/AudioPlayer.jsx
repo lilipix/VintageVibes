@@ -71,14 +71,14 @@ const AudioPlayer = () => {
           </div>
         </div>
       </main>
-      <div className="flex justify-center mb-2  ">
+      <div className="flex justify-center mb-4 ">
         <Footer className="container" />
       </div>
-      <div className=" text-xs absolute top-0 right-0 icon">
+      {/* <div className=" text-xs absolute top-0 right-0 icon">
         <a href="http://www.freepik.com">
           Background image designed by Freepik
         </a>
-      </div>
+      </div> */}
     </div>
   );
 };
