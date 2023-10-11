@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import test4 from "../assets/test4.jpg";
 import logo1 from "../assets/logo1.png";
+import logo2 from "../assets/logo2.png";
 import { tracks } from "../data/tracks.js";
 import DisplayTrack from "./DisplayTrack";
 import Controls from "./Controls";
@@ -29,7 +30,7 @@ const AudioPlayer = () => {
     <div className="flex flex-col h-screen  relative">
       <main className="flex-grow flex items-center justify-center max-h-full">
         <img
-          src={logo1}
+          src={logo2}
           alt="logo"
           className="absolute md:bottom-5 left-4 xl:left-8 w-20 top-8 "
         />
