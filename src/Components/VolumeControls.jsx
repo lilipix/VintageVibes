@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 
 const VolumeControls = ({ audioRef }) => {
-  const [volume, setVolume] = useState(60);
+  const [volume, setVolume] = useState(50);
 
   useEffect(() => {
     if (audioRef && audioRef.current) {

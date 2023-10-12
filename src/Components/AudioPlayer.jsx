@@ -28,7 +28,7 @@ const AudioPlayer = () => {
 
   return (
     <div className="flex flex-col h-screen  relative">
-      <main className="flex-grow flex items-center justify-center max-h-full">
+      <main className="flex-grow flex items-center justify-center max-h-full rotate-container">
         <img
           src={logo2}
           alt="logo"
@@ -47,7 +47,7 @@ const AudioPlayer = () => {
           />
           <div className="flex items-center justify-center ">
             <div className=" bg-green rounded-3xl w-[300px] h-[200px] md:h-[280px] md:w-[420px] lg:h-[467px] lg:w-[600px] xl:w-[900px] xl:h-[600px] relative flex flex-col border-darkBrown border-4  ">
-              <div className=" border-double border-black  border-4 md:w-[360px] xl:w-[500px] rounded-3xl flex self-center bg-gray-500 mt-2 md:mt-5 mb-3 md:mb-5 lg:mt-10 overflow-hidden relative h-10 md:h-24 items-center p-4 w-[280px]">
+              <div className=" border-double border-black border-4 md:w-[360px] xl:w-[500px] rounded-3xl flex self-center bg-gray-500 mt-2 md:mt-5 mb-3 md:mb-5 lg:mt-10 overflow-hidden relative h-10 md:h-24 items-center p-4 w-[250px]">
                 <DisplayTrack
                   currentTrack={currentTrack}
                   audioRef={audioRef}
@@ -55,7 +55,7 @@ const AudioPlayer = () => {
                 />
               </div>
               <div className=" flex grow items-center justify-center">
-                <div className="rounded-full border-red border-8 mb-10 md:mb-16 lg:mb-24  ">
+                <div className="rounded-full border-red border-4 md:border-8 mb-10 md:mb-16 lg:mb-24  ">
                   <img
                     src={test4}
                     alt="tape"
@@ -77,8 +77,8 @@ const AudioPlayer = () => {
           </div>
         </div>
       </main>
-      <div className="flex justify-center mb-12 md:mb-6 ">
-        <Footer className="container" />
+      <div className="flex justify-center mb-12 md:mb-6">
+        <Footer />
       </div>
     </div>
   );
